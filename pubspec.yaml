@@ -7,7 +7,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.1.2
+  sdk: ^3.0.2
 
 dependencies:
   flutter:
@@ -25,12 +25,12 @@ dependencies:
   mobx: ^2.2.0
   mobx_codegen: ^2.3.0
 
-  #최신버젼시 에러 발생 낮춰
-
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  build_runner: ^2.4.4
 
   flutter_lints: ^2.0.0
 
