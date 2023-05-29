@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx/mobx.dart';
 
-import 'vm/main_store.dart';
+import 'vm/sensor_vm.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +29,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  final SensorValueStore vm = SensorValueStore();
+  final SensorStore vm = SensorStore();
 
   @override
   Widget build(BuildContext context) {
