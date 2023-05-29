@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 
-import 'vm/sensor_vm.dart';
+import 'view/rssi_list_tab.dart';
+import 'view/sensor_value_tab.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,21 +28,32 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  final SensorStore vm = SensorStore();
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Flutter Demo Home Page')),
-      body: Observer(
-          builder: (_) {
-            return Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-               Text('${vm.gyro.time} ,${vm.gyro.value} '),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        backgroundColor: Colors.blueGrey[50],
+        appBar: AppBar(
+          title: const Text("센서값 불러오기"),
+          backgroundColor: Colors.lightBlue[900],
+          bottom: const TabBar(
+            tabs: [
+              Tab(
+                text: ("센서 값"),
+              ),
+              Tab(
+                text: ("Rssi 목록"),
+              ),
             ],
-          );
-        },
+          ),
+        ),
+        body: const TabBarView(
+          children: [
+            SenSorValueTab(),
+            RssiListTab(),
+          ],
+        ),
       ),
     );
   }

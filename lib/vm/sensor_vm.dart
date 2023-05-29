@@ -46,19 +46,4 @@ abstract class _SensorStore with Store {
 
   @computed
   Magnetometer get mag => _mag;
-
-  @observable
-  ObservableList<Rssi> _rssiList = ObservableList.of([]);
-
-  @action
-  void setRssiList({required List<Rssi> rssiList}) {
-    _rssiList.clear();
-    _rssiList = ObservableList.of(rssiList);
-  }
-
-  @action
-  void clearRssiList() => _rssiList.clear();
-
-  @computed
-  ObservableList<Rssi> get rssiList => _rssiList;
 }

@@ -21,6 +21,7 @@ dependencies:
   json_serializable: ^6.7.0
   time_machine: ^0.9.17
 
+  #mobx 관랸
   flutter_mobx: ^2.0.6+5
   mobx: ^2.2.0
   mobx_codegen: ^2.3.0
@@ -30,6 +31,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  #mobx 관련
   build_runner: ^2.4.4
 
   flutter_lints: ^2.0.0
